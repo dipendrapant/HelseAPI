@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-helseapi-Encounter" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-helseapi-Encounter" />
+  <name value="NoHelseAPIEncounter" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/no-basis-Encounter" />
+  <snapshot>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <short value="An interaction during which services are provided to the patient" />
+      <definition value="An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Encounter" />
+      </type>
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <short value="Specific type of encounter" />
+      <definition value="The specific type of encounter." />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://hl7.no/fhir/ValueSet/valueset-encounter-type" /> <!-- Custom ValueSet URL from HL7 fhir ValueSet encounter-type used-->
+      </binding>
+    </element>
+    <!-- Add other elements as needed -->
+  </snapshot>
+</StructureDefinition>

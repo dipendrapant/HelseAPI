@@ -1,0 +1,41 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="no-helseapi-encounter-type" />
+  <name value="HelseAPIEncounterType" />
+  <url value="https://hl7.no/fhir/ValueSet/no-helseapi-encounter-type" />
+  <title value="HelseAPI Encounter Type" />
+  <status value="active" /> <!-- Active not draft?or?test -->
+  <publisher value="Norsk Helsenett"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="NO" />
+      <display value="Norway" />
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct" />
+      <concept>
+        <code value="4525004" />
+        <display value="Emergency department patient visit" />
+      </concept>
+      <concept>
+        <code value="50849002" />
+        <display value="Emergency room admission" />
+      </concept>
+      <!-- Add other SNOMED CT codes as needed -->
+    </include>
+    <include>
+      <system value="https://volven.no" />
+      <concept>
+        <code value="8432" />
+        <display value="NPR Contact type" />
+      </concept>
+      <concept>
+        <code value="8240" />
+        <display value="Contact type" />
+      </concept>
+      <!-- Add other Volven codes as needed -->
+    </include>
+  </compose>
+</ValueSet>
